@@ -1,0 +1,16 @@
+Source: dh-valgrind
+Maintainer: Joshua Peisach <itzswirlz2020@outlook.com>
+Section: devel
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
+Homepage: https://salsa.debian.org/ItzSwirlz-guest/
+Vcs-Browser: https://salsa.debian.org/ItzSwirlz-guest/dh-valgrind
+Vcs-Git: https://salsa.debian.org/ItzSwirlz-guest/dh-valgrind.git
+
+Package: dh-valgrind
+Architecture: all
+Depends: debhelper-compat (= 13), valgrind, ${misc:Depends}, ${perl:Depends}
+Description: Valgrind sequence for debhelper
+ Insert something here. call valgrind from debhelper

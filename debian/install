@@ -1,0 +1,2 @@
+dh_valgrind /usr/bin
+valgrind.pm /usr/share/perl5/Debian/Debhelper/Sequence

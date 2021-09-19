@@ -1,0 +1,23 @@
+#!/usr/bin/perl -wl
+
+=head1 NAME
+
+dh_valgrind - Call valgrind -q for testing binaries
+
+=cut
+
+use strict;
+use warnings;
+use Debian::Debhelper::Dh_Lib;
+
+eval {
+  if (@ARGV) {
+    doit('valgrind' ,'-q', @ARGV);
+  } elsif (defined $ENV{DH_VALGRIND_ARGS} && $ENV{DH_VALGRIND_ARGS} ne "") {
+    doit('valgrind', '-q', $ENV{DH_VALGRIND_ARGS});
+  } else {
+    print('No valgrind command specified. Skipping valgrind sequence.');
+  }
+};
+
+1;
